@@ -43,8 +43,11 @@ public class VRTargetItem : MonoBehaviour
     {
         //invoke events that are set up in the inspector
         if (m_submit != null)
+        {
             m_submit.OnSubmit(pointer);
-        else
+            Debug.Log("Clicked");
+        }
+                   else
             m_completionEvent.Invoke();
     }
 }
