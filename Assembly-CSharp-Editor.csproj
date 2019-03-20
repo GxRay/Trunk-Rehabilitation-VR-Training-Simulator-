@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D0930DB3-8E40-60FA-CB9B-778D8E7AED8E}</ProjectGuid>
+    <ProjectGuid>{19FF74A0-0C83-424C-607B-008617FDCE89}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -60,21 +60,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Editor\CreateLocatorHere.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\AutoFloatInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\AxisInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\BarChartInspetor.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\CategoryLabelsInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\ChartDataEditor.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\ChartEditorCommon.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\ChartOrientedSizeInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\EditorMenu.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\GraphChartInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\GroupLabelsInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\ItemLabelsBaseEditor.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\ItemLabelsInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\MaterialTilingInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\PieChartInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\RadarChartInspector.cs" />
+    <Compile Include="Assets\Editor\Chart And Graph\RenameWindow.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -314,34 +329,34 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="GitHub.Api.45">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
     </Reference>
     <Reference Include="GitHub.Logging">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
     </Reference>
     <Reference Include="GitHub.Unity.45">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
     </Reference>
     <Reference Include="GitHub.UnityShim">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
     </Reference>
     <Reference Include="sfw.net">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/krish/Documents/Unity Documents/Accel-Test/Accelerometer Test 2/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>D:/Documents/VR Biofeedback Display/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -700,11 +715,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{D2680BFF-6CBC-4C2A-B5AB-5F08D92E17D4}</Project>
+      <Project>{88CAD785-0258-CB43-4B58-1A3390C2BF7C}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{9C8E694A-6CB6-2892-6AB1-94643F1CABFF}</Project>
+      <Project>{D322973F-556F-56D6-2B31-F4742265896D}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
