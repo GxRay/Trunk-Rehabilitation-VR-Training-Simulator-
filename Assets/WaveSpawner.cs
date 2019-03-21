@@ -24,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
             CancelInvoke("SpawnObject");
 
         }
-
+        
     }
 
 

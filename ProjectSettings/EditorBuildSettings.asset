@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dungeon Level.unity
     guid: 73002a6bc2c43684383a694e197db775
+  - enabled: 1
+    path: Assets/Training Room.unity
+    guid: deb5eabaed8bba148a908c298b69adaf
   m_configObjects: {}

@@ -21,6 +21,21 @@ public class ButtonManager : MonoBehaviour
 
     }
 
+    public void TrainingButton()
+    {
+
+        SceneManager.LoadScene("Training Room");
+        SceneManager.UnloadScene("HelloVR");
+
+    }
+    public void TrainingBackButton()
+    {
+
+        SceneManager.UnloadScene("Training Room");
+        SceneManager.LoadScene("HelloVR");
+
+    }
+
     public void QuitButton ()
     {
         Application.Quit();
