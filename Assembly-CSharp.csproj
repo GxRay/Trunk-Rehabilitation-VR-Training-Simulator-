@@ -197,9 +197,9 @@
     <Compile Include="Assets\Chart and Graph\Tutorials\Large Data Graph\LargeDataFeed.cs" />
     <Compile Include="Assets\Chart and Graph\Tutorials\Pie\PieChartFeed.cs" />
     <Compile Include="Assets\Chart and Graph\Tutorials\Radar\RadarChartFeed.cs" />
-    <Compile Include="Assets\Chart and Graph\Tutorials\Stream Graph\StreamingGraph.cs" />
     <Compile Include="Assets\Cube_Tilt.cs" />
     <Compile Include="Assets\Data_Aquisition.cs" />
+    <Compile Include="Assets\StreamingGraph.cs" />
     <Compile Include="Assets\Window_Graph.cs" />
     <None Include="Assets\Chart and Graph\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
     <None Include="Assets\Chart and Graph\Shaders\GradientWorldSpace.shader" />

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 namespace ChartAndGraph
 {
+    [System.Serializable]
     public class GraphChart : GraphChartBase, ICanvas
     {
         private Vector2 mLastSetSize = Vector2.zero;
