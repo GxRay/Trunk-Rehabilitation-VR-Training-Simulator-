@@ -62,3 +62,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 0912484af2358a045a29e24668981e7a, type: 3}
+    name: Gem_Sound
+    volume: 0.56
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

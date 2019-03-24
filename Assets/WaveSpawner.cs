@@ -7,6 +7,7 @@ public class WaveSpawner : MonoBehaviour
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
+    public Vector3 SpawnZone;
 
     private void Start()
     {
@@ -18,7 +19,12 @@ public class WaveSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        Instantiate(spawnee, transform.position, transform.rotation);
+        // Randomizes Spawn Area for Objects between Back Wall (FOR NOW)
+        float SpawnZone_X = Random.Range(-3.64f, 2.1f);
+        float SpawnZone_Y = Random.Range(-1.3f, 1.4f);
+        float SpawnZone_Z = 0.0f;
+        SpawnZone = new Vector3(SpawnZone_X, SpawnZone_Y, SpawnZone_Z);
+        Instantiate(spawnee, transform.position+SpawnZone, transform.rotation);
         if (stopSpawning)
         {
             CancelInvoke("SpawnObject");
