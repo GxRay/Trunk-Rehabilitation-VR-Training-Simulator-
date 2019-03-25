@@ -40,6 +40,15 @@ public class Player_Collision : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        // If the Player hits the Green Gem
+        if (other.gameObject.tag == "Life_Gem")
+        {
+            lives += 1;
+            SetLiveText();
+            FindObjectOfType<AudioManager>().Play("Gem_Sound");
+            Destroy(other.gameObject);
+        }
+
     }
 
     void SetLiveText()

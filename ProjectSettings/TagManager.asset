@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spike
   - Score_Gem
+  - Life_Gem
   layers:
   - Default
   - TransparentFX

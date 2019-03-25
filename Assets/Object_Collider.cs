@@ -19,7 +19,7 @@ public class Object_Collider : MonoBehaviour
          transform.Rotate(0, 0,rotateSpeedSpike * Time.deltaTime, Space.Self);
             transform.Translate(0, 0, moveSpeedSpike * Time.deltaTime,Space.World);
         }
-        if (gameObject.tag == "Score_Gem")
+        if (gameObject.tag == "Score_Gem" || gameObject.tag == "Life_Gem")
         {
             transform.Rotate(0, rotateSpeedGem * Time.deltaTime, 0, Space.Self);
             transform.Translate(0, 0, moveSpeedGem * Time.deltaTime, Space.World);
