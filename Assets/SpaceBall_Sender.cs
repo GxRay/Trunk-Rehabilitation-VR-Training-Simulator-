@@ -12,7 +12,35 @@ public class SpaceBall_Sender : MonoBehaviour
     public string data;
     public void Calibrate()
     {
+        data = "001";
+        BeginSendData("192.168.4.1", 80);
 
+    }
+
+    public void RollLeft()
+    {
+        data = "101";
+        BeginSendData("192.168.4.1", 80);
+
+    }
+
+    public void RollRight()
+    {
+        data = "201";
+        BeginSendData("192.168.4.1", 80);
+
+    }
+
+    public void PitchUp()
+    {
+        data = "301";
+        BeginSendData("192.168.4.1", 80);
+
+    }
+
+    public void PitchDown()
+    {
+        data = "401";
         BeginSendData("192.168.4.1", 80);
 
     }
