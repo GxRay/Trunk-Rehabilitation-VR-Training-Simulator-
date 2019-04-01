@@ -10,6 +10,7 @@ using UnityEngine;
 public class SpaceBall_Sender : MonoBehaviour
 {
     public string data;
+    private int databuffer;
     public void Calibrate()
     {
         data = "001";
@@ -45,6 +46,28 @@ public class SpaceBall_Sender : MonoBehaviour
 
     }
 
+    public void RandomMovement()
+    {
+        bool same = true;
+        int direction = Random.Range(1, 4);
+        int Tens_movement = Random.Range(0, 3);
+        int Ones_movement = Random.Range(1, 9);
+        while (same)
+        {
+            if (direction == databuffer)
+            {
+                direction = Random.Range(1, 4);
+               
+            }
+            else { same = false; }
+        }
+        data = direction.ToString() + Tens_movement.ToString() + Ones_movement.ToString();
+        databuffer = direction;
+        Debug.Log(data);
+        //BeginSendData("192.168.4.1", 80);
+
+    }
+
     public void BeginSendData(string IP, int Port)
     {
         
@@ -53,11 +76,7 @@ public class SpaceBall_Sender : MonoBehaviour
 
             // Creating Client on specified IP adress and Port
             client.Connect(IP, Port);
-        //if (client.Connected != true)
-        //{
-        //    Debug.Log("Network Not Found");
-        //    return;
-        //}
+
         while (client.Connected)
         {
             
