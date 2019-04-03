@@ -12849,7 +12849,7 @@ PrefabInstance:
     - target: {fileID: 4643907140450068959, guid: 8eb565b3e6b846246add20a03e6e5449,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4643907140450068953, guid: 8eb565b3e6b846246add20a03e6e5449,
         type: 3}
@@ -24964,7 +24964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69e51176891c00846a6209d6bdffa34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceballTimer: 10
+  SpaceballTimer: 20
   Spaceball: {fileID: 1158080527}
 --- !u!136 &817425704
 CapsuleCollider:
@@ -38742,7 +38742,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1388168098}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

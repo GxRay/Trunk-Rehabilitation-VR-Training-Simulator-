@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dmusic : MonoBehaviour
 {
     [SerializeField]
-    private float SpaceballTimer = 10f;
+    private float SpaceballTimer = 20f;
 
     public GameObject Spaceball;
 
