@@ -56,11 +56,12 @@ public class Data_Aquisition : MonoBehaviour
                     EMGleftOb = float.Parse(all_data[2], CultureInfo.InvariantCulture.NumberFormat);
                     EMGrightOb = float.Parse(all_data[3], CultureInfo.InvariantCulture.NumberFormat);
                     EMGerect = float.Parse(all_data[4], CultureInfo.InvariantCulture.NumberFormat);
-                    //Accely = float.Parse(all_data[1], CultureInfo.InvariantCulture.NumberFormat);
-                    //Accelz = float.Parse(all_data[2], CultureInfo.InvariantCulture.NumberFormat);
-                    //Gyrox = float.Parse(all_data[3], CultureInfo.InvariantCulture.NumberFormat);
-                    //Gyroy = float.Parse(all_data[4], CultureInfo.InvariantCulture.NumberFormat);
-                    //Gyroz = float.Parse(all_data[5], CultureInfo.InvariantCulture.NumberFormat);
+                    Accelx = float.Parse(all_data[5], CultureInfo.InvariantCulture.NumberFormat);
+                    Accely = float.Parse(all_data[6], CultureInfo.InvariantCulture.NumberFormat);
+                    Accelz = float.Parse(all_data[7], CultureInfo.InvariantCulture.NumberFormat);
+                    Gyrox = float.Parse(all_data[8], CultureInfo.InvariantCulture.NumberFormat);
+                    Gyroy = float.Parse(all_data[9], CultureInfo.InvariantCulture.NumberFormat);
+                    Gyroz = float.Parse(all_data[10], CultureInfo.InvariantCulture.NumberFormat);
 
                     buffer.Clear();
 
