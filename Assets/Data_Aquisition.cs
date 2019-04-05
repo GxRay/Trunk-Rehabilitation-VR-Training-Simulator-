@@ -78,7 +78,9 @@ public class Data_Aquisition : MonoBehaviour
 
             client.GetStream().Close();
             client.Client.Close();
-                       
+
+            
+
         });
         thread.Start();
     }

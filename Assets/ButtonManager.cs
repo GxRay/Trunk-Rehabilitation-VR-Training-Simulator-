@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    public Data_Aquisition AccelInfo;
 
+    private void disconnect()
+    {
+        AccelInfo.client.GetStream().Close();
+        AccelInfo.client.Close();
+    }
     private void Start()
     {
         // Find Audiomanager object in project and set name
@@ -33,13 +39,15 @@ public class ButtonManager : MonoBehaviour
 
         SceneManager.UnloadScene("Training Room");
         SceneManager.LoadScene("HelloVR");
+        disconnect();
 
     }
 
     public void QuitButton ()
     {
+        disconnect();
         Application.Quit();
-
+        
     }
 
     // Dungeon Room Buttons
@@ -48,6 +56,7 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.UnloadScene("Dungeon Level");
         SceneManager.LoadScene("HelloVR");
+        disconnect();
     }
 
 }
