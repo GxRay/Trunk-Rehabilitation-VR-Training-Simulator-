@@ -15,13 +15,20 @@ public class StreamingGraph : MonoBehaviour
 
     void Start()
     {
-        AccelInfo.Begin("10.17.234.137", 80);
+        //if (AccelInfo.client.Connected == false)
+        //{
+            AccelInfo.Begin("10.17.234.137", 80);
+            Debug.Log("Finished TCP Begin");
+        //}
+
         if (Graph == null) // the ChartGraph info is obtained via the inspector
             return;
         float x = 3f * TotalPoints;
+
         foreach (GraphChart g in Graph){
             g.DataSource.StartBatch(); // calling StartBatch allows changing the graph data without redrawing the graph for every change
         }
+
         Graph[0].DataSource.ClearCategory("EMGleftRA"); // clear the "Player 1" category. this category is defined using the GraphChart inspector
         Graph[1].DataSource.ClearCategory("EMGrightRA");
         Graph[2].DataSource.ClearCategory("EMGleftOb");
@@ -49,6 +56,8 @@ public class StreamingGraph : MonoBehaviour
         {
             g.DataSource.EndBatch(); // finally we call EndBatch , this will cause the GraphChart to redraw itself
         }
+
+        Debug.Log("Finished start method");
     }
 
     void Update()
