@@ -13,6 +13,7 @@ public class Data_Aquisition : MonoBehaviour
     public float Accely , Gyroy;
     public float Accelz , Gyroz;
     public float EMGleftRA,EMGrightRA,EMGleftOb,EMGrightOb,EMGerect;
+    public TcpClient client;
     
 
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class Data_Aquisition : MonoBehaviour
         var thread = new Thread(() =>
         {
             // Declaring Client
-            var client = new TcpClient();
+            client = new TcpClient();
 
             // Creating Client on specified IP adress and Port
             client.Connect(IP, Port);
@@ -76,7 +77,7 @@ public class Data_Aquisition : MonoBehaviour
             }
 
             client.GetStream().Close();
-            client.Close();
+            client.Client.Close();
                        
         });
         thread.Start();
