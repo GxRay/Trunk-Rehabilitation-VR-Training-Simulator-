@@ -15,7 +15,7 @@ public class StreamingGraph : MonoBehaviour
 
     void Start()
     {
-        AccelInfo.Begin("192.168.4.1", 80);
+        AccelInfo.Begin("10.17.234.137", 80);
         if (Graph == null) // the ChartGraph info is obtained via the inspector
             return;
         float x = 3f * TotalPoints;
