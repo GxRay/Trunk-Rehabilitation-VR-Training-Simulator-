@@ -9,9 +9,9 @@ using UnityEngine;
 
 public class Data_Aquisition : MonoBehaviour
 {
-    public float Accelx , Gyrox;
-    public float Accely , Gyroy;
-    public float Accelz , Gyroz;
+    public float Accelx;
+    public float Accely;
+    public float Accelz;
     public float EMGleftRA,EMGrightRA,EMGleftOb,EMGrightOb,EMGerect;
     public TcpClient client;
     
@@ -60,9 +60,10 @@ public class Data_Aquisition : MonoBehaviour
                     Accelx = float.Parse(all_data[5], CultureInfo.InvariantCulture.NumberFormat);
                     Accely = float.Parse(all_data[6], CultureInfo.InvariantCulture.NumberFormat);
                     Accelz = float.Parse(all_data[7], CultureInfo.InvariantCulture.NumberFormat);
-                    Gyrox = float.Parse(all_data[8], CultureInfo.InvariantCulture.NumberFormat);
-                    Gyroy = float.Parse(all_data[9], CultureInfo.InvariantCulture.NumberFormat);
-                    Gyroz = float.Parse(all_data[10], CultureInfo.InvariantCulture.NumberFormat);
+                    
+                    //Gyrox = float.Parse(all_data[8], CultureInfo.InvariantCulture.NumberFormat);
+                    //Gyroy = float.Parse(all_data[9], CultureInfo.InvariantCulture.NumberFormat);
+                    //Gyroz = float.Parse(all_data[10], CultureInfo.InvariantCulture.NumberFormat);
 
                     buffer.Clear();
 

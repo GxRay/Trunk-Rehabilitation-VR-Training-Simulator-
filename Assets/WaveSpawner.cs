@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
     private void Start()
     {
         /// Adds the start time and final time to the spawn object
-        InvokeRepeating("SpawnObject", spawnTime, spawnDelay);
+        StartSpawn();
     }
 
     public void StartSpawn ()
@@ -27,7 +27,6 @@ public class WaveSpawner : MonoBehaviour
     {
         if (stopSpawning)
         {
-            Destroy(spawnee);
             CancelInvoke("SpawnObject");
             
         } 

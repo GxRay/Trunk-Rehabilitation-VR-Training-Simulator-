@@ -10,8 +10,7 @@ public class Level_Manager : MonoBehaviour
     public int level = 1;
     public Text Time_Text;
     double timer_totext;
-    public GameObject LiveText, ScoreText, BioFeedback, ScoreBoard,Spaceball;
-    public WaveSpawner SGemSpawner, LGemSpawner, SpSpawner;
+    public GameObject LiveText, ScoreText, BioFeedback, ScoreBoard,Spaceball, SGemSpawner, LGemSpawner, SpSpawner;
     public float SpaceballTimer = 20f;
 
 
@@ -35,9 +34,9 @@ public class Level_Manager : MonoBehaviour
         LiveText.SetActive(false);
         ScoreText.SetActive(false);
         BioFeedback.SetActive(false);
-        SGemSpawner.stopSpawning = true;
-        LGemSpawner.stopSpawning = true;
-        SpSpawner.stopSpawning = true;
+        SGemSpawner.GetComponent<WaveSpawner>().stopSpawning = true;
+        LGemSpawner.GetComponent<WaveSpawner>().stopSpawning = true;
+        SpSpawner.GetComponent<WaveSpawner>().stopSpawning = true;
         ScoreBoard.SetActive(true);
 
     }
@@ -63,13 +62,13 @@ public class Level_Manager : MonoBehaviour
         level += 1;
 
         // Resume Spawning of Objects
-        SGemSpawner.stopSpawning = false;
-        LGemSpawner.stopSpawning = false;
-        SpSpawner.stopSpawning = false;
+        SGemSpawner.GetComponent<WaveSpawner>().stopSpawning = false;
+        LGemSpawner.GetComponent<WaveSpawner>().stopSpawning = false;
+        SpSpawner.GetComponent<WaveSpawner>().stopSpawning = false;
 
-        SGemSpawner.StartSpawn();
-        LGemSpawner.StartSpawn();
-        SpSpawner.StartSpawn();
+        SGemSpawner.GetComponent<WaveSpawner>().StartSpawn();
+        LGemSpawner.GetComponent<WaveSpawner>().StartSpawn();
+        SpSpawner.GetComponent<WaveSpawner>().StartSpawn();
     }
 
     //Controlling Spaceball movement
