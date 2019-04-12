@@ -38,16 +38,53 @@ public class AccelTilt : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(pitch + 270, 0f, -roll + 180), Time.deltaTime * speed);
 
 
+        if (pitch - previouspitch > 10)
+        {
+            SideMovementGraph();
+            Erect.SetActive(false);
 
-        if (roll-previousroll > 10)
+        }
+
+        else if (pitch - previouspitch < -10)
+        {
+            Erect.SetActive(true);
+            if (roll - previousroll > 10)
+            {
+                LeftRA.SetActive(false);
+                RightRA.SetActive(false);
+                LeftOb.SetActive(true);
+                RightOb.SetActive(false);
+            }
+            else if (roll - previousroll < -10)
+            {
+                RightRA.SetActive(false);
+                LeftRA.SetActive(false);
+                RightOb.SetActive(true);
+                LeftOb.SetActive(false);
+            }
+        }
+        else
+        {
+            SideMovementGraph();
+        }
+
+
+        previousroll = roll;
+        previouspitch=pitch;
+        
+    }
+
+
+    void SideMovementGraph ()
+    {
+        if (roll - previousroll > 10)
         {
             LeftRA.SetActive(true);
             LeftOb.SetActive(true);
             RightRA.SetActive(false);
             RightOb.SetActive(false);
         }
-        
-        if (roll-previousroll < -10)
+        else if (roll - previousroll < -10)
         {
             RightRA.SetActive(true);
             RightOb.SetActive(true);
@@ -55,19 +92,7 @@ public class AccelTilt : MonoBehaviour
             LeftOb.SetActive(false);
         }
 
-        //if (pitch < -65)
-        //{
-        //    Erect.SetActive(true);
-        //}
 
-        //if (pitch > )
-        //{
-
-        //}
-
-        previousroll=roll;
-        previouspitch=pitch;
-        
     }
 }
 
