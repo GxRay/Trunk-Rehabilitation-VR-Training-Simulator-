@@ -45,24 +45,24 @@ public class AccelTilt : MonoBehaviour
 
         }
 
-        else if (pitch - previouspitch < -10)
-        {
-            Erect.SetActive(true);
-            if (roll - previousroll > 10)
-            {
-                LeftRA.SetActive(false);
-                RightRA.SetActive(false);
-                LeftOb.SetActive(true);
-                RightOb.SetActive(false);
-            }
-            else if (roll - previousroll < -10)
-            {
-                RightRA.SetActive(false);
-                LeftRA.SetActive(false);
-                RightOb.SetActive(true);
-                LeftOb.SetActive(false);
-            }
-        }
+        //else if (pitch - previouspitch < -10)
+        //{
+        //    Erect.SetActive(false);
+        //    if (roll - previousroll > 10)
+        //    {
+        //        LeftRA.SetActive(false);
+        //        RightRA.SetActive(false);
+        //        LeftOb.SetActive(true);
+        //        RightOb.SetActive(false);
+        //    }
+        //    else if (roll - previousroll < -10)
+        //    {
+        //        RightRA.SetActive(false);
+        //        LeftRA.SetActive(false);
+        //        RightOb.SetActive(true);
+        //        LeftOb.SetActive(false);
+        //    }
+        //}
         else
         {
             SideMovementGraph();
@@ -77,21 +77,21 @@ public class AccelTilt : MonoBehaviour
 
     void SideMovementGraph ()
     {
-        if (roll - previousroll > 10)
+        if (roll - previousroll > 5)
         {
             LeftRA.SetActive(true);
-            LeftOb.SetActive(true);
+            LeftOb.SetActive(false);
             RightRA.SetActive(false);
             RightOb.SetActive(false);
         }
-        else if (roll - previousroll < -10)
+        else if (roll - previousroll < -5)
         {
             RightRA.SetActive(true);
-            RightOb.SetActive(true);
+            RightOb.SetActive(false);
             LeftRA.SetActive(false);
             LeftOb.SetActive(false);
         }
-
+       
 
     }
 }

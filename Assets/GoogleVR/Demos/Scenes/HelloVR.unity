@@ -1235,7 +1235,7 @@ GameObject:
   - component: {fileID: 596140084}
   - component: {fileID: 596140083}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2526,7 +2526,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dc4d1f62feb06a445bcf1f305862f6bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c648d12916e89c94292afe3e072eedb1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4723,7 +4723,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 748dd63b97f0806428f3f4d25b167e8e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe35b525dae46b640add5ba3160f467e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5840,7 +5840,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Training
+  m_text: Live Data
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7088345bb9c1c3d46a482ba432f6f8c7, type: 2}
   m_sharedMaterial: {fileID: 21155756233583826, guid: 7088345bb9c1c3d46a482ba432f6f8c7,
@@ -5910,10 +5910,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1691005898}
-    characterCount: 8
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
