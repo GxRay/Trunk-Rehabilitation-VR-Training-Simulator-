@@ -23,7 +23,7 @@ public class StreamingGraph : MonoBehaviour
         //if (AccelInfo.client.Connected == false)
         //{
         //AccelInfo.Begin("10.17.35.42", 80); //RU Secure on testing board
-        AccelInfo.Begin("10.17.234.137", 80); //RU Secure
+        AccelInfo.Begin("10.17.151.14", 80); //RU Secure
         //AccelInfo.Begin("192.168.1.8", 80); //Home Testing
         Debug.Log("Finished TCP Begin");
         //}

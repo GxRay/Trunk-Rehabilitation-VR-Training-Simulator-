@@ -10,6 +10,8 @@ public class AccelTilt : MonoBehaviour
     public float speed = 3.2f;
     public float cutoff = 0.1f;
     public float cutoff1 = 0f;
+    public float Roll_Angle, Pitch_Angle;
+    public int divide;
     public Quaternion rotOffset = Quaternion.identity;
     public GameObject LeftRA, RightRA, LeftOb, RightOb, Erect;
     private float previousroll, previouspitch;
@@ -33,9 +35,9 @@ public class AccelTilt : MonoBehaviour
         yaw = AccelInfo.Accelx;
         roll = AccelInfo.Accely;
         pitch = AccelInfo.Accelz;
-
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(pitch + 270, 0f, -roll + 180), Time.deltaTime * speed);
+        Roll_Angle = RollTiltControl(roll);
+        Pitch_Angle = PitchTiltControl(pitch);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Pitch_Angle + 270, 0f, -Roll_Angle + 180), Time.deltaTime * speed);
 
 
         if (pitch - previouspitch > 10)
@@ -91,9 +93,20 @@ public class AccelTilt : MonoBehaviour
             LeftRA.SetActive(false);
             LeftOb.SetActive(false);
         }
+    }
+
+    private float RollTiltControl(float r)
+    {
+        r = r / divide;
+        int x = (int)Math.Round(r);
+        return (x*divide);
        
+    }
+    private float PitchTiltControl(float r)
+    {
+        r = r / divide;
+        int x = (int)Math.Round(r);
+        return (x * divide);
 
     }
 }
-
-   
