@@ -15,35 +15,35 @@ public class SpaceBall_Sender : MonoBehaviour
     public void Calibrate()
     {
         data = "001";
-        BeginSendData("10.17.38.127", 80);
+        BeginSendData("10.17.100.240", 80);
 
     }
 
     public void RollLeft()
     {
         data = "101";
-        BeginSendData("10.17.38.127", 80);
+        BeginSendData("10.17.100.240", 80);
 
     }
 
     public void RollRight()
     {
         data = "201";
-        BeginSendData("10.17.38.127", 80);
+        BeginSendData("10.17.100.240", 80);
 
     }
 
     public void PitchUp()
     {
         data = "301";
-        BeginSendData("10.17.38.127", 80);
+        BeginSendData("10.17.100.240", 80);
 
     }
 
     public void PitchDown()
     {
         data = "401";
-        BeginSendData("10.17.38.127", 80);
+        BeginSendData("10.17.100.240", 80);
 
     }
 
@@ -98,7 +98,7 @@ public class SpaceBall_Sender : MonoBehaviour
         data = direction.ToString() + Tens_movement.ToString() + Ones_movement.ToString();
         databuffer = direction;
         Debug.Log(data);
-        BeginSendData("10.17.38.127", 80);
+        BeginSendData("10.17.100.240", 80);
 
     }
 

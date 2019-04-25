@@ -45,9 +45,8 @@ public class ButtonManager : MonoBehaviour
 
     public void QuitButton ()
     {
-        disconnect();
         Application.Quit();
-        
+        disconnect();
     }
 
     // Dungeon Room Buttons
