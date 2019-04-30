@@ -56,9 +56,9 @@ Associated files: ![WIFI Communication Between Spaceball and Unity](Assets/Space
 
 Once the training simulation starts, objects start getting thrown toward the user. These objects come in the form of weapons that the user must dodge, and gems that the user will have to collect. The purpose of implementing this system was to motivate the user to train their muscles through gamification. In order to dodge/collect the objects, the user will have to move their torso away from the object. This movement is tracked by the accelerometer attached to the Wearable Acquisition Belt. As the user tilts away from the oncoming objects, they will use their trunk muscles as it is primarily responsible for tilting movements. The EMG activity of the muscles will be recorded via the Wearable Acquisition Belt and be displayed on the HUD throughout the training simulation, which allows for the user to be aware of how much their trunk muscles are being activated.  The training simulation will also trigger Spaceball movements, the purpose of this is to put users in positions where they must use more of their trunk muscles  in order to keep it stable.  As the training simulation progresses, the game will get more difficult through the more frequent movement of the Spaceball and faster object spawning.
 
-####Player view in game:
+#### Player view in game:
 ![gpic](https://user-images.githubusercontent.com/47070972/56942396-82260f00-6ae8-11e9-807f-9e6f8d7d04ff.png)
-####Spaceball moving in correspendence to in-game commands:
+#### Spaceball moving in correspendence to in-game commands:
 ![dfsdv](https://user-images.githubusercontent.com/47070972/56942423-b26dad80-6ae8-11e9-8fe5-ae6d9ae58ba6.PNG)
 
 Associated files: ![Getting Biofeedback from EMG Belt](Assets/Data_Aquisition.cs) 
