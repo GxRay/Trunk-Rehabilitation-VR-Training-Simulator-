@@ -19,6 +19,8 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 <a name="motivation"/> <br/>
 [Overview](#overview)
 <a name="overview"/> <br/>
+[Signal Processing](#signal-processing)
+<a name="osignal-processing"/> <br/>
 [Main Menu](#main-menu)
 <a name="main-menu"/> <br/>
 [Calibration](#calibration)
@@ -31,12 +33,21 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 ## Associated Repositories
 [1. Spaceball Code](https://github.com/bharath1000/VR_Simulator-Spaceball) <br/>
 [2. Wearable Aquisition Belt Code](https://github.com/GxRay/VR-EMGAccel-Arduino)<br/>
+[2. Filters in C# Code](https://github.com/mariusrubo)<br/>
 
 # Motivation
 
 Currently, there is a need for intensive research efforts in the fields of geriatrics, exercise science and physiotherapy to address rising age-related and cost-intensive health care problems. One of the biggest problems in the field of geriatrics is the high prevalence of falls due to aging causing functional, neural and muscular deterioration. Current mitigation techniques to offset this effect traditionally include balance/lower extremity resistance training. However, the effects of this type of training poorly translates to real life which leads to insignificant improvements in balance and daily activities. This project aims to address this issue by providing an interactive training experience that includes live biofeedback to monitor trunk muscle activity. The proposed design will make use of multiple electromyograph (EMG) sensors embedded into a wearable belt to monitor trunk muscle activity during training. The set-up of the training will incorporate an interactive virtual reality environment which will have built-in training applications that the user can follow. The training also makes use of a limited Aerotrim structure that can be triggered to move in two dimensions, Pitch and Roll. 
 
 # Overiew
+
+## Signal Proessing
+The following Filters were implemented in C# and taken from associated repository item number 3.
+### Band-Pass Butterworth Filter
+Once EMG signals were obtained in Unity, a band-pass filter was applied to the signal. This filter was applied to reduce the effects movement artifacts and baseline noise may have on the EMG signal. The type of filter that was selected was a 2nd order Butterworth band-pass filter with a band-pass of 20-300Hz. The 20Hz cut off was selected as there is only a minor amount of energy present in the frequencies below this cut off while frequencies above 300 were attenuated to get rid of high frequency noise and focus on the relevant muscle contractions.
+
+### Notch Filter
+The filtered signal will then be sent through a Notch filter which was implemented to reduce powerline interference. For the context of this design, powerline interference can be defined as the noise generated on the signal due to the electricity travelling through the wires of the circuit such as the EMG electrodes. To account for this, the Notch filter will be set to attenuate frequencies at 60Hz, with a bandwidth of 5, as majority of powerline interference takes place at this frequency.
 
 ### Main Menu
 Upon opening the application, the user will first be prompted with a menu screen that displays 4 different options. The Calibration option will return both the pitch and roll of the Spaceball to its center position. The Play option will send the player to another menu where they can select a game of their choosing. The Live Data option will allow the user to see real time biofeedback via EMG sensors in the trunk muscles of their choosing. The Quit option will simply leave and close the application.
