@@ -13,14 +13,14 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 <a name="motivation"/> <br/>
 [Overview](#overview)
 <a name="overview"/> <br/>
-[Main Menu](#mainmenu)
-<a name="mainmenu"/> <br/>
+[Main Menu](#main-menu)
+<a name="main-menu"/> <br/>
 [Calibration](#calibration)
 <a name="calibration"/> <br/>
 [Gameplay](#gameplay)
 <a name="gameplay"/> <br/>
-[Live Data](#livedata)
-<a name="livedata"/> <br/>
+[Live Data](#live-data)
+<a name="live-data"/> <br/>
 
 
 
