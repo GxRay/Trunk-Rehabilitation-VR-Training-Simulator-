@@ -1,7 +1,7 @@
 # VIRTUAL REALITY TRUNK MUSCLE TRAINING SYSTEM
 
 
-  
+<p align="center">  
 <img src="https://user-images.githubusercontent.com/47070972/56987158-a3bfde80-6b5a-11e9-80a2-32347fdc55a1.png" align="center">
 
 To act as a patient interface to the training application, a smartphone app will be required to start virtual reality program. 
@@ -12,6 +12,7 @@ Android devices, using Unity 3D and C# in compatibility mode with the android So
 These options will be selected using the timed gaze input modality, so that no hand movements or external devices are required to 
 interact with the VR space. Auditory and visual feedback will be provided to ensure a smooth and accessible VR experience.
 
+</p>
 
 ### Table of Contents
 [Motivation](#motivation)
