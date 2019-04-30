@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Globalization;
+using System;
 using UnityEngine;
 using ChartAndGraph;
 
@@ -20,10 +21,13 @@ public class StreamingGraph : MonoBehaviour
 
     void Start()
     {
+
+        AccelInfo.csvPath = GetPath();
         //if (AccelInfo.client.Connected == false)
         //{
         //AccelInfo.Begin("10.17.35.42", 80); //RU Secure on testing board
         AccelInfo.Begin("10.17.151.14", 80); //RU Secure
+
         //AccelInfo.Begin("192.168.1.8", 80); //Home Testing
         Debug.Log("Finished TCP Begin");
         //}
@@ -76,5 +80,16 @@ public class StreamingGraph : MonoBehaviour
             Debug.Log("Updated Graphs");
             AccelInfo.EMGdata.Clear();
         }
+    }
+
+    private string GetPath()
+    {
+#if UNITY_EDITOR
+        return Application.dataPath + "/" + DateTime.Now.ToString("MMMdHHmm") + ".csv";
+#elif UNITY_ANDROID
+        return Application.persistentDataPath + DateTime.Now.ToLongTimeString() + ".csv";
+#else
+        return Application.dataPath + "/" + DateTime.Now.ToLongTimeString() + ".csv";
+#endif
     }
 }

@@ -14,8 +14,9 @@ public class SpaceBall_Sender : MonoBehaviour
     public Level_Manager difficulty;
     public void Calibrate()
     {
-        data = "001";
-        BeginSendData("10.17.100.240", 80);
+        Debug.Log("done");
+        //data = "001";
+        //BeginSendData("10.17.100.240", 80);
 
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
@@ -21,6 +22,7 @@ public class Data_Aquisition : MonoBehaviour
     FilterData.IIRFilter LAlp, RAlp, LOlp, ROlp, ERlp;
     public List<PointData> EMGdata = new List<PointData>();
     PointData temppoints;
+    public string csvPath;
 
     public struct PointData
     {
@@ -35,7 +37,8 @@ public class Data_Aquisition : MonoBehaviour
     // Start is called before the first frame update
     public void Begin(string IP, int Port)
     {
-        var thread = new Thread(() =>
+       
+            var thread = new Thread(() =>
         {
             // Declaring Client
             client = new TcpClient();
@@ -54,68 +57,81 @@ public class Data_Aquisition : MonoBehaviour
 
             var stream = new StreamReader(client.GetStream());
 
+            StringBuilder csvString = new StringBuilder();
+
             //Declaring Temporary Buffer
             var buffer = new List<byte>();
+            
 
-            while (client.Connected)
-            {
-                // Reads data stream
-                var data = stream.Read();
-
-                if (data == 13)
+                while (client.Connected)
                 {
-                    // Converting Incoming ASCII Values to string
-                    var incommingData = Encoding.ASCII.GetString(buffer.ToArray());
-                    // Display Data
-                    Debug.Log("Data Recieved:" + incommingData);
-                    // Spliting Data into appropriate variables
-                    string[] all_data = incommingData.Split(',');
+                    // Reads data stream
+                    var data = stream.Read();
 
-                    // Conerting String to Float data
-                    float EMGleftRA = float.Parse(all_data[0], CultureInfo.InvariantCulture.NumberFormat);
-                    float EMGrightRA = float.Parse(all_data[1], CultureInfo.InvariantCulture.NumberFormat);
-                    float EMGleftOb = float.Parse(all_data[2], CultureInfo.InvariantCulture.NumberFormat);
-                    float EMGrightOb = float.Parse(all_data[3], CultureInfo.InvariantCulture.NumberFormat);
-                    float EMGerect = float.Parse(all_data[4], CultureInfo.InvariantCulture.NumberFormat);
-                    Accelx = float.Parse(all_data[5], CultureInfo.InvariantCulture.NumberFormat);
-                    Accely = float.Parse(all_data[6], CultureInfo.InvariantCulture.NumberFormat);
-                    Accelz = float.Parse(all_data[7], CultureInfo.InvariantCulture.NumberFormat);
-                    //no need for gyro as accel and gyro is combined in arduino
-                    //Gyrox = float.Parse(all_data[8], CultureInfo.InvariantCulture.NumberFormat);
-                    //Gyroy = float.Parse(all_data[9], CultureInfo.InvariantCulture.NumberFormat);
-                    //Gyroz = float.Parse(all_data[10], CultureInfo.InvariantCulture.NumberFormat);
-
-                    buffer.Clear();
-
-                    temppoints.EMGleftRA = filt.Filter(EMGleftRA, LAnotch60);
-                    temppoints.EMGrightRA = filt.Filter(EMGrightRA, RAnotch60);
-                    temppoints.EMGleftOb = filt.Filter(EMGleftOb, LOnotch60);
-                    temppoints.EMGrightOb = filt.Filter(EMGrightOb, ROnotch60);
-                    temppoints.EMGerect = filt.Filter(EMGerect, ERnotch60);
-
-                    //temppoints.EMGleftRA = EMGleftRA_i;
-                    //temppoints.EMGrightRA = EMGrightRA_i;
-                    //temppoints.EMGleftOb = EMGleftOb_i;
-                    //temppoints.EMGrightOb = EMGrightOb_i;
-                    //temppoints.EMGerect = EMGerect_i;
-
-                    lock (EMGdata)
+                    if (data == 13)
                     {
-                        EMGdata.Add(temppoints);
-                        Debug.Log("Placed in list");
+
+                        // Converting Incoming ASCII Values to string
+                        var incommingData = Encoding.ASCII.GetString(buffer.ToArray());
+
+                        //Writing Data to CSV string
+                        csvString.AppendLine(incommingData);
+                        
+
+                        // Display Data
+                        Debug.Log("Data Recieved:" + incommingData);
+                        // Spliting Data into appropriate variables
+                        string[] all_data = incommingData.Split(',');
+
+                        // Conerting String to Float data
+                        float EMGleftRA = float.Parse(all_data[0], CultureInfo.InvariantCulture.NumberFormat);
+                        float EMGrightRA = float.Parse(all_data[1], CultureInfo.InvariantCulture.NumberFormat);
+                        float EMGleftOb = float.Parse(all_data[2], CultureInfo.InvariantCulture.NumberFormat);
+                        float EMGrightOb = float.Parse(all_data[3], CultureInfo.InvariantCulture.NumberFormat);
+                        float EMGerect = float.Parse(all_data[4], CultureInfo.InvariantCulture.NumberFormat);
+                        Accelx = float.Parse(all_data[5], CultureInfo.InvariantCulture.NumberFormat);
+                        Accely = float.Parse(all_data[6], CultureInfo.InvariantCulture.NumberFormat);
+                        Accelz = float.Parse(all_data[7], CultureInfo.InvariantCulture.NumberFormat);
+                        //no need for gyro as accel and gyro is combined in arduino
+                        //Gyrox = float.Parse(all_data[8], CultureInfo.InvariantCulture.NumberFormat);
+                        //Gyroy = float.Parse(all_data[9], CultureInfo.InvariantCulture.NumberFormat);
+                        //Gyroz = float.Parse(all_data[10], CultureInfo.InvariantCulture.NumberFormat);
+
+                        buffer.Clear();
+
+                        temppoints.EMGleftRA = filt.Filter(EMGleftRA, LAnotch60);
+                        temppoints.EMGrightRA = filt.Filter(EMGrightRA, RAnotch60);
+                        temppoints.EMGleftOb = filt.Filter(EMGleftOb, LOnotch60);
+                        temppoints.EMGrightOb = filt.Filter(EMGrightOb, ROnotch60);
+                        temppoints.EMGerect = filt.Filter(EMGerect, ERnotch60);
+
+                        //temppoints.EMGleftRA = EMGleftRA_i;
+                        //temppoints.EMGrightRA = EMGrightRA_i;
+                        //temppoints.EMGleftOb = EMGleftOb_i;
+                        //temppoints.EMGrightOb = EMGrightOb_i;
+                        //temppoints.EMGerect = EMGerect_i;
+
+                        lock (EMGdata)
+                        {
+                            EMGdata.Add(temppoints);
+                            Debug.Log("Placed in list");
+                        }
                     }
+                    else
+                        // Continue reading incomming data
+                        buffer.Add((byte)data);
+
+
                 }
-                else
-                    // Continue reading incomming data
-                    buffer.Add((byte)data);
-
-
-
-            }
-
-
+            //Write data to CSV file after the connection is closed
+            //using (StreamWriter csvWrite = new StreamWriter(csvPath, append: true))
+            //{
+            //    csvWrite.Write(csvString);
+            //}
 
         });
-        thread.Start();
+            thread.Start();
+        
     }
+
 }
