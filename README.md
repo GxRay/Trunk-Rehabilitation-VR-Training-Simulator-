@@ -51,4 +51,4 @@ The Live data menu selection allows for users to see selective muscle groups EMG
 ![sdsd](https://user-images.githubusercontent.com/47070972/56943327-fbbffc00-6aec-11e9-9d89-be34fc624b86.png)
 
 
-Associated files: ![Graphing EMG Data](Assets/Chart and Graph/Tutorials/Stream Graph/StreamingGraph.cs)  
+Associated files: ![Graphing EMG Data](Assets/Chart and Graph/Tutorials/Stream Graph/StreamingGraph.cs)
