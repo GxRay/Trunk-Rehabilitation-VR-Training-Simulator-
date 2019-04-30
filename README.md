@@ -33,7 +33,7 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 ## Associated Repositories
 [1. Spaceball Code](https://github.com/bharath1000/VR_Simulator-Spaceball) <br/>
 [2. Wearable Aquisition Belt Code](https://github.com/GxRay/VR-EMGAccel-Arduino)<br/>
-[3. Filters in C# Code](https://github.com/mariusrubo)<br/>
+[3. Filters in C# Code](https://github.com/mariusrubo/Unity-IIR-Realtime-Filtering)<br/>
 
 # Motivation
 
@@ -42,7 +42,7 @@ Currently, there is a need for intensive research efforts in the fields of geria
 # Overiew
 
 ## Signal Proessing
-The following Filters were implemented in C# and taken from associated repository item number 3.
+The following real time IIR Filters were implemented in C# and used code from associated repository item number 3.
 ### Band-Pass Butterworth Filter
 Once EMG signals were obtained in Unity, a band-pass filter was applied to the signal. This filter was applied to reduce the effects movement artifacts and baseline noise may have on the EMG signal. The type of filter that was selected was a 2nd order Butterworth band-pass filter with a band-pass of 20-300Hz. The 20Hz cut off was selected as there is only a minor amount of energy present in the frequencies below this cut off while frequencies above 300 were attenuated to get rid of high frequency noise and focus on the relevant muscle contractions.
 
