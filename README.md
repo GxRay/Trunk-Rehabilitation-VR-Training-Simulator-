@@ -9,11 +9,10 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 
 
 ### Table of Contents
-[Headers](#headers)
+[Motivation](#motivation)
 [Emphasis](#empgasis)
 ...snip...
-<a name="headers"/>
-## Headers
+<a name="motivation"/>
 
 # Motivation
 
