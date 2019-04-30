@@ -1,8 +1,9 @@
 # VIRTUAL REALITY TRUNK MUSCLE TRAINING SYSTEM
 
 <p align="center">
-  <img/>
+  
 ![Test_1](https://user-images.githubusercontent.com/47070972/56987158-a3bfde80-6b5a-11e9-80a2-32347fdc55a1.png)
+
 </p>
 To act as a patient interface to the training application, a smartphone app will be required to start virtual reality program. 
 This has the added benefit of being able to integrate into a wearable headset with the smartphone as a VR screen, such as google cardboard
