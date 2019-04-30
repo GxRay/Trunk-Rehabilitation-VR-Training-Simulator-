@@ -22,8 +22,9 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 [Live Data](#live-data)
 <a name="live-data"/> <br/>
 
-
-
+### Associated Repositories
+[1. Spaceball Code](https://github.com/GxRay/VR_Simulator-Spaceball)
+[2. Wearable Aquisition Belt Code](https://github.com/GxRay/VR-EMGAccel-Arduino)
 
 # Motivation
 
