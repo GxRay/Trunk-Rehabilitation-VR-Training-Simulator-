@@ -14,7 +14,7 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 
 </p>
 
-### Table of Contents
+## Table of Contents
 [Motivation](#motivation)
 <a name="motivation"/> <br/>
 [Overview](#overview)
@@ -28,7 +28,7 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 [Live Data](#live-data)
 <a name="live-data"/> <br/>
 
-### Associated Repositories
+## Associated Repositories
 [1. Spaceball Code](https://github.com/GxRay/VR_Simulator-Spaceball) <br/>
 [2. Wearable Aquisition Belt Code](https://github.com/GxRay/VR-EMGAccel-Arduino)<br/>
 
