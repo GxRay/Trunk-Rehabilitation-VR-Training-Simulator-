@@ -14,7 +14,7 @@ Upon opening the application, the user will first be prompted with a menu screen
 
 ![mainmenu](https://user-images.githubusercontent.com/47070972/56940448-8a784d00-6adc-11e9-99b0-547d609c9978.png)
 
-Associated files: ![Buttons](Assets/ButtonManager.cs) ![Timed Gaze Input](Assets/Scripts)![Menu Screen](Assets/Scenes)
+Associated files: ![Buttons](Assets/ButtonManager.cs) ![Timed Gaze Input](Assets/Scripts) ![Menu Screen](Assets/Scenes)
 
 ### Calibration
 
