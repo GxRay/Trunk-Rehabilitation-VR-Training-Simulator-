@@ -33,7 +33,7 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 ## Associated Repositories
 [1. Spaceball Code](https://github.com/bharath1000/VR_Simulator-Spaceball) <br/>
 [2. Wearable Aquisition Belt Code](https://github.com/GxRay/VR-EMGAccel-Arduino)<br/>
-[2. Filters in C# Code](https://github.com/mariusrubo)<br/>
+[3. Filters in C# Code](https://github.com/mariusrubo)<br/>
 
 # Motivation
 
