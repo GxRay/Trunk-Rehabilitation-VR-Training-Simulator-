@@ -40,7 +40,16 @@ Spaceball moving in correspendence to in-game commands:
 
 Associated files: ![Getting Biofeedback from EMG Belt](Assets/Data_Aquisition.cs) 
 ![Accelerometer Input to Tilt Player](Assets/AccelTilt.cs)
-![Dungeon level Scene](Assets/Dungeon Level.unity) 
 ![Player Collision](Assets/Player_Collision.cs)
 ![Weapon & Gem Spawner](Assets/WaveSpawner.cs)
 ![Player Score Tracker](Assets/Player_Statistics.cs) 
+
+### Live Data
+
+The Live data menu selection allows for users to see selective muscle groups EMG activity in real time.  The trunk muscles are split into 3 muscle groups; which consists of the Rectus Abdominus muscles (left and right), External Obliques (left and right) and the Erector Spinae. In the menu, the user can select which muscle group they would like to view (seen on the left below), after selection the graphs will be enabled which will display the corresponding muscle activity (seen on the left below).  The user can then try activating their trunk muscles through flexing or performing tilting movements and see each muscles groups contribution to the movement/flexion.
+
+![sdsd](https://user-images.githubusercontent.com/47070972/56943327-fbbffc00-6aec-11e9-9d89-be34fc624b86.png)
+
+
+Associated files: ![Graphing EMG Data](Assets/Chart and Graph/Tutorials/Stream Graph/StreamingGraph.cs)
+)  
