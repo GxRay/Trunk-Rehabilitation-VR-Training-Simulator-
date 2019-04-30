@@ -1,6 +1,4 @@
 # VIRTUAL REALITY TRUNK MUSCLE TRAINING SYSTEM
-Biomedical Engineering Capstone Project - A trunk stability training simulator using VR and an Aerotrim Device
-
 To act as a patient interface to the training application, a smartphone app will be required to start virtual reality program. 
 This has the added benefit of being able to integrate into a wearable headset with the smartphone as a VR screen, such as google cardboard
 or similar VR headset device. The phone can track patient head movements separately from trunk movements. The app will be programmed for
