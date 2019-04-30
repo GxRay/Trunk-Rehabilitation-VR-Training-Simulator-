@@ -10,9 +10,14 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 
 ### Table of Contents
 [Motivation](#motivation)
-[Emphasis](#empgasis)
+[Overview](#overview)
+[Main Menu](#mainmenu)
+[Overview](#overview)
+[Overview](#overview)
 ...snip...
 <a name="motivation"/>
+<a name="overview"/>
+<a name="mainmenu"/>
 
 # Motivation
 
