@@ -7,6 +7,14 @@ Android devices, using Unity 3D and C# in compatibility mode with the android So
 These options will be selected using the timed gaze input modality, so that no hand movements or external devices are required to 
 interact with the VR space. Auditory and visual feedback will be provided to ensure a smooth and accessible VR experience.
 
+
+### Table of Contents
+[Headers](#headers)
+[Emphasis](#empgasis)
+...snip...
+<a name="headers"/>
+## Headers
+
 # Motivation
 
 Currently, there is a need for intensive research efforts in the fields of geriatrics, exercise science and physiotherapy to address rising age-related and cost-intensive health care problems. One of the biggest problems in the field of geriatrics is the high prevalence of falls due to aging causing functional, neural and muscular deterioration. Current mitigation techniques to offset this effect traditionally include balance/lower extremity resistance training. However, the effects of this type of training poorly translates to real life which leads to insignificant improvements in balance and daily activities. This project aims to address this issue by providing an interactive training experience that includes live biofeedback to monitor trunk muscle activity. The proposed design will make use of multiple electromyograph (EMG) sensors embedded into a wearable belt to monitor trunk muscle activity during training. The set-up of the training will incorporate an interactive virtual reality environment which will have built-in training applications that the user can follow. The training also makes use of a limited Aerotrim structure that can be triggered to move in two dimensions, Pitch and Roll. 
@@ -49,4 +57,4 @@ The Live data menu selection allows for users to see selective muscle groups EMG
 ![sdsd](https://user-images.githubusercontent.com/47070972/56943327-fbbffc00-6aec-11e9-9d89-be34fc624b86.png)
 
 
-Associated files: ![Graphing EMG Data](Assets/Chart and Graph/Tutorials/Stream Graph/StreamingGraph.cs)
+Associated files: ![Graphing EMG Data](Assets/Chart%20and%20Graph/Tutorials/Stream%20Graph/StreamingGraph.cs)
