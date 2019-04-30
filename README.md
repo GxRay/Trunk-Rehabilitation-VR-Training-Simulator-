@@ -49,21 +49,21 @@ Once EMG signals were obtained in Unity, a band-pass filter was applied to the s
 ### Notch Filter
 The filtered signal will then be sent through a Notch filter which was implemented to reduce powerline interference. For the context of this design, powerline interference can be defined as the noise generated on the signal due to the electricity travelling through the wires of the circuit such as the EMG electrodes. To account for this, the Notch filter will be set to attenuate frequencies at 60Hz, with a bandwidth of 5, as majority of powerline interference takes place at this frequency.
 
-### Main Menu
+## Main Menu
 Upon opening the application, the user will first be prompted with a menu screen that displays 4 different options. The Calibration option will return both the pitch and roll of the Spaceball to its center position. The Play option will send the player to another menu where they can select a game of their choosing. The Live Data option will allow the user to see real time biofeedback via EMG sensors in the trunk muscles of their choosing. The Quit option will simply leave and close the application.
 
 ![mainmenu](https://user-images.githubusercontent.com/47070972/56940448-8a784d00-6adc-11e9-99b0-547d609c9978.png)
 
 Associated files: ![Buttons](Assets/ButtonManager.cs) ![Timed Gaze Input](Assets/Scripts) ![Menu Screen](Assets/Scenes)
 
-### Calibration
+## Calibration
 
 Once the Calibration option in the main menu is selected, a C# script will be triggered to initiate a server-client connection between the application and the microcontroller on the Spaceball circuit. Starting from the server side, the microcontroller is set up to receive a message from the application which will correspond to a 3-digit number code. Clicking the calibration button will send a data message that starts with the character ‘0’ to the microcontroller. The microcontrollers code 
 ([Spaceball Code](https://github.com/GxRay/VR_Simulator-Spaceball)) is set up such that any message that starts with the ‘0’ character will initiate a calibrate function. This function will cause the Spaceball the move such that the user sitting inside is centered, the calibrate function was determined via testing in section 9.1. For troubleshooting/testing purposes, a Manual Override option (seen below)  button was added to the main menu to manually control the Spaceball. Pressing this button will lead to another screen where the user can manually move the Spaceball in both Pitch and Roll motions incrementally. 
 ![cmenu](https://user-images.githubusercontent.com/47070972/56941752-9700a380-6ae4-11e9-9414-21f9030fa13c.png)
 
 Associated files: ![WIFI Communication Between Spaceball and Unity](Assets/SpaceBall_Sender.cs)
-### Gameplay
+## Gameplay
 
 Once the training simulation starts, objects start getting thrown toward the user. These objects come in the form of weapons that the user must dodge, and gems that the user will have to collect. The purpose of implementing this system was to motivate the user to train their muscles through gamification. In order to dodge/collect the objects, the user will have to move their torso away from the object. This movement is tracked by the accelerometer attached to the Wearable Acquisition Belt. As the user tilts away from the oncoming objects, they will use their trunk muscles as it is primarily responsible for tilting movements. The EMG activity of the muscles will be recorded via the Wearable Acquisition Belt and be displayed on the HUD throughout the training simulation, which allows for the user to be aware of how much their trunk muscles are being activated. This is done using the Adafruit Huzzah ESP32 board where data is sent over WIFI through TCP/IP communication as a comma seperated string where unity parses and displays it accordingly. The training simulation will also trigger Spaceball movements, the purpose of this is to put users in positions where they must use more of their trunk muscles  in order to keep it stable.  As the training simulation progresses, the game will get more difficult through the more frequent movement of the Spaceball and faster object spawning.
 
@@ -78,7 +78,7 @@ Associated files: ![Getting Biofeedback from EMG Belt](Assets/Data_Aquisition.cs
 ![Weapon & Gem Spawner](Assets/WaveSpawner.cs)
 ![Player Score Tracker](Assets/Player_Statistics.cs) 
 
-### Live Data
+## Live Data
 
 The Live data menu selection allows for users to see selective muscle groups EMG activity in real time.  The trunk muscles are split into 3 muscle groups; which consists of the Rectus Abdominus muscles (left and right), External Obliques (left and right) and the Erector Spinae. In the menu, the user can select which muscle group they would like to view (seen on the left below), after selection the graphs will be enabled which will display the corresponding muscle activity (seen on the left below).  The user can then try activating their trunk muscles through flexing or performing tilting movements and see each muscles groups contribution to the movement/flexion.
 
