@@ -15,7 +15,8 @@ interact with the VR space. Auditory and visual feedback will be provided to ens
 <a name="overview"/>
 [Main Menu](#mainmenu)
 <a name="mainmenu"/>
-[Overview](#overview)
+[Gameplay](#gameplay)
+<a name="gameplay"/>
 [Overview](#overview)
 ...snip...
 
